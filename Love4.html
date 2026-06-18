@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujumbe wa Upendo ❤️</title>
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7e6ff;
+    color: #4b0082;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    scroll-behavior: smooth;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff69b4, #8a2be2, #4169e1);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slide-up 1s ease-in-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.heart-container {
+    margin: 20px 0;
+}
+
+.heart-pulse {
+    font-size: 80px;
+    color: #ff0000;
+    animation: heart-pulse 1.5s infinite;
+}
+
+@keyframes heart-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fade-in 2s ease-in& ;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.message {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#show-message-btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background: #ff69b4;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#show-message-btn:hover {
+    background: #ff478a;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none;
+}
+
+#special-message {
+    margin-top: 20px;
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 10px;
+    animation: fade-in 1s ease;
+}
+
+</style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <h1 class="fade-in">Kwa Upendo Wangu</h1>
+        <div class="heart-container">
+            <span class="heart-pulse">❤️</span>
+        </div>
+      <img src="/storage/emulated/0/glory.jpg" height="190" width="150" alt="my photo">
+        <p class="message fade-in">
+          <p>
+            "Happy Birthday Glory wangu! 🥳❤️ Wewe si rafiki tu, ni familia kwangu. Asante kwa nyakati zote nzuri na msaada wako. Nakutakia kila la kheri, mafanikio na furaha tele. Enjoy your special day, bestie! 
+          </p>
+        <button id="show-message-btn">Soma Ujumbe Maalum</button>
+        <div id="special-message" class="hidden">
+          <p>Napenda kuona tabasamu laki kila mara kipenzi changu glory❤️ </p>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+    const showMessageBtn = document.getElementById('show-message-btn');
+    const specialMessageDiv = document.getElementById('special-message');
+
+    showMessageBtn.addEventListener('click', () => {
+        if (specialMessageDiv.classList.contains('hidden')) {
+            specialMessageDiv.classList.remove('hidden');
+            showMessageBtn.textContent = 'Ficha Ujumbe Maalum';
+        } else {
+            specialMessageDiv.classList.add('hidden');
+            showMessageBtn.textContent = 'Soma Ujumbe Maalum';
+        }
+    });
+});
+</script>
+</body>
+</html>
